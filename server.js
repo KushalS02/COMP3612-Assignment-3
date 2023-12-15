@@ -47,7 +47,7 @@ app.get("/api/painting/gallery/:id", (req, resp) => {
         return resp.json({ ErrorMessage: `no paintings found in gallery ID: ${id}` });
     }
 
-    resp.json(paintingsInGallery);
+    return resp.json(paintingsInGallery);
 });
 
 // returns JSON for all paintings with the specified artist ID
