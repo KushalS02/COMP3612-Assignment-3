@@ -148,7 +148,6 @@ app.get("/api/galleries/:country", (req, resp) => {
     return resp.json(galleriesFromCountry);
 });
 
-const PORT = 3000;
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log(`Server is running on port ${PORT}`);
 })
